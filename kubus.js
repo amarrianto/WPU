@@ -12,3 +12,10 @@ function jumlahVolumeKubus(a, b) {
 }
 
 alert(jumlahVolumeKubus(8, 4));
+
+
+
+
+
+
+
