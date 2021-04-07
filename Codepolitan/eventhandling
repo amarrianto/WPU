@@ -1,0 +1,58 @@
+Events Handling
+Secara sederhana, events adalah suatu kejadian yang terjadi di browser atau di web app kita. Pada React, penulisan event harus dengan format camelCase, contoh:
+
+onClick
+onChange
+onSubmit
+Sama seperti elemen html, elemen React juga memiliki default behaviour. Default behaviour adalah aksi dari elemen yang semestinya terjadi ketika suatu event berlangsung. Contoh dari default behaviour adalah:
+
+Form akan ter-submit ketika tombol submit di klik.
+Link akan redirect ke url tujuan ketika link tersebut di klik.
+Untuk melakukan pencegahan default behaviour, Anda dapat menggunakan method preventDefault(), sama seperti ketika menggunakan JQuery.
+
+Sebuah event akan di tangani oleh sebuah method yang biasa disebut handler. Pada umumnya ada dua cara penamaan method untuk hal ini, Anda dapat menggunakan salah satunya, atau dapat menggunakan penamaan sendiri sesuai kesepakatan tim Anda.
+
+Misalkan kita memiliki button login, maka penamaan method handler-nya adalah:
+
+// penamaan 1
+buttonLoginHandler
+
+// penamaan 2
+handleButtonLogin
+Untuk memahami proses events handling, mari kita praktikan.
+
+Latihan events handling
+Buka kembali project my-app kemudian buka file App.js.
+
+Kita akan merubah nama cafe ketika button "ganti nama" di klik.
+
+Ikuti langkah-langkah berikut:
+
+Tambahkan button dan beri label 'ganti nama':
+<button>Ganti Nama Resto</button>
+Tambahkan event dan nama handler nya, sehingga menjadi:
+<button onClick={this.handleGantiNama}>Ganti Nama Resto</button>
+Buat method handler dan pastikan nama-nya sesuai, yaitu handleGantiNama. Untuk tahap awal, kita gunakan console.log untuk memastikan bahwa event dan listener / handler nya berjalan normal.
+handleGantiNama = () => {
+    console.log('button di click')
+}
+Jalankan app dan buka browser, kemudian buka developer tools (pada chrome/chromium, tekan kombinasi Ctrl+Shift+I). Perhatikan tab console.
+
+Cobalah klik pada button yang baru saja dibuat. Jika pada console muncul teks 'button di click', berarti event dan handler berjalan dengan baik.
+
+Hapus console.log dan gunakan method setState untuk mengganti state namaResto:
+
+handleGantiNama = () => {
+    this.setState({ namaResto: 'Programmer'})
+}
+Save file dan buka browser lagi, sekarang coba klik pada tombol tadi. Jika teks Codepolitan sudah berganti menjadi Programmer, berarti Anda sudah berhasil membuat event handler dan memanipulasi state. Ketika state berubah, maka component akan di render ulang.
+Selain cara seperti diatas, kita juga dapat memberikan parameter pada method handler. Format penulisannya sedikit berbeda. Perhatikan contoh berikut:
+
+Ubah kode pada button menjadi:
+
+<button onClick={() => this.handleGantiNama('Cipedes')}>Ganti Nama Resto</button>
+Kemudian ubah method handler nya menjadi:
+
+handleGantiNama = (nama) => {
+    this.setState({ namaResto: nama})
+}
