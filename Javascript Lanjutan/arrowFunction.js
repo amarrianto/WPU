@@ -63,14 +63,53 @@ let mahasiswa = ["Amar Rianto", "Vega Gusti", "Udin"];
 //arrow function constructor
 // constructor tidak bisa menggunakan arrow function
 // method bisa menggunakan arrow function
+// arrow function tidak memiliki konsep this
 
-const Mahasiswa = function () {
-  this.nama = "Amar";
-  this.umur = 25;
-  this.sayHello = () => {
-    console.log(`Hallo, nama saya ${this.nama},dan saya ${this.umur} tahun.`);
-  };
-  return this.sayHello();
-};
+// const Mahasiswa = function () {
+//   this.nama = "Amar";
+//   this.umur = 25;
+//   this.sayHello = () => {
+//     console.log(`Hallo, nama saya ${this.nama},dan saya ${this.umur} tahun.`);
+//   };
+//   return this.sayHello();
+// };
 
-const amar = new Mahasiswa();
+// const amar = new Mahasiswa();
+
+//object literal
+// const mhs1 = {
+//   nama: "Amar",
+//   umur: 33,
+//   sayHello: () => {
+//     console.log(`Hallo, nama saya ${this.nama}, dan saya ${this.umur} tahun.`);
+//   },
+// };
+
+// const Mahasiswa = function () {
+//   this.nama = "Amar";
+//   this.umur = 25;
+//   this.sayHello = function () {
+//     console.log(`Hallo, nama saya ${this.nama}, dan saya ${this.umur} tahun.`);
+//   };
+
+//   setInterval(() => {
+//     console.log(this.umur++);
+//   }, 500);
+// };
+
+// const amar = new Mahasiswa();
+
+const box = document.querySelector(".box");
+box.addEventListener("click", function () {
+  let satu = "size";
+  let dua = "caption";
+
+  if (this.classList.contains(satu)) {
+    [satu, dua] = [dua, satu];
+  }
+
+  this.classList.toggle(satu);
+  setTimeout(() => {
+    this.classList.toggle(dua);
+  }, 600);
+});
