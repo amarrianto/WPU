@@ -22,7 +22,7 @@ const detik = jsLanjut - menit * 60;
 
 //simpan di DOM
 const pDurasi = document.querySelector(".total-durasi");
-pDurasi.textContent = `${jam}Jam, ${menit}Menit, ${detik}Detik.`;
+pDurasi.textContent = `${jam} Jam, ${menit} Menit, ${detik} Detik.`;
 const jmlVideo = videos.filter((video) =>
   video.textContent.includes("JAVASCRIPT LANJUTAN")
 ).length;
