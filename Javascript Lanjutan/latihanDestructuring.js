@@ -50,7 +50,7 @@ const mhs1 = {
 //menggunakan destructuring
 
 function cetakMhs({ nama, umur, email, nilai: { tugas, uas, uts } }) {
-  return `Hallo, nama saya ${nama}. saya berumur${umur} tahun. dan nilai uas saya adalah ${tugas}`;
+  return `Hallo, nama saya ${nama}. saya berumur${umur} tahun. dan nilai uas saya adalah ${uas}`;
 }
 
 console.log(cetakMhs(mhs1));
