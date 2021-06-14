@@ -1,0 +1,23 @@
+[
+  {
+    "nama": "Amar",
+    "nrp": "121621215",
+    "email": "amarrianto@gmail.com",
+    "jurusan": "Sistem Informasi",
+    "idDosenWali": 1
+  },
+  {
+    "nama": "Bima",
+    "nrp": "121621215",
+    "email": "amarrianto@gmail.com",
+    "jurusan": "Sistem Informasi",
+    "idDosenWali": 1
+  },
+  {
+    "nama": "Bekti",
+    "nrp": "121621215",
+    "email": "amarrianto@gmail.com",
+    "jurusan": "Sistem Informasi",
+    "idDosenWali": 2
+  }
+]
